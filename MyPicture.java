@@ -1,28 +1,41 @@
-public class Picture
+
+/**
+ * Write a description of class MyPicture here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class MyPicture
 {
+    // instance variables - replace the example below with your own
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
     private boolean drawn;
+    private Square wall2;
+    private Square window2;
+    private Triangle roof2;
+    
 
     /**
-     * Constructor for objects of class Picture
+     * Constructor for objects of class MyPicture
      */
-    public Picture()
+    public MyPicture()
     {
         wall = new Square();
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        wall2 = new Square();
+        window2 = new Square();
+        roof2 = new Triangle();
         drawn = false;
     }
-
-    /**
-     * Draw this picture.
-     */
-    public void draw()
+    
+    public void draw ()
     {
+        // initialise instance variables
         if(!drawn) {
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
@@ -47,28 +60,6 @@ public class Picture
             sun.changeSize(80);
             sun.makeVisible();
             drawn = true;
-        }
     }
-
-    /**
-     * Change this picture to black/white display
-     */
-    public void setBlackAndWhite()
-    {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
-    }
-
-    /**
-     * Change this picture to use color display
-     */
-    public void setColor()
-    {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
-    }
+  }
 }
